@@ -102,6 +102,32 @@ const API_BASE_URL = 'https://company-finder-xxxx.vercel.app';
    - Missing `vercel.json` - ensure it exists in `client/public/backend-kit/`
    - Missing dependencies - check `package.json` has `puppeteer-core` and `@sparticuz/chromium`
 
+### Memory Limitations
+
+**Hobby Plan (Free):**
+- Max 1024 MB per serverless function
+- Max 60 seconds execution time
+- Good for light testing and development
+
+**Pro Plan:**
+- Max 3008 MB per serverless function
+- Max 900 seconds execution time
+- Better for production and heavy scraping
+
+**If You Hit Memory Limits:**
+1. Upgrade to **Pro Plan** (paid): Go to Vercel Dashboard → Settings → Billing → Upgrade
+2. Create a **Team** on Pro Plan: https://vercel.com/teams/create
+3. Redeploy your project to the Pro team
+
+To use a Pro team after creating it:
+1. Go to https://vercel.com/new
+2. Select your new Pro team from the dropdown
+3. Import and deploy your repository
+
+**Current Settings:** 1024 MB (Hobby-friendly)
+- Sufficient for most company searches
+- If you need more power, upgrade to Pro
+
 ### API Not Working?
 
 1. Check CORS headers are being sent (they are!)
@@ -115,6 +141,10 @@ const API_BASE_URL = 'https://company-finder-xxxx.vercel.app';
 2. **Environment Variables**: Add secrets in Settings → Environment Variables
 3. **Auto-Deploy**: Push to GitHub and Vercel auto-deploys
 4. **Redeploy**: Click "Deploy" button in Vercel dashboard to rebuild
+5. **Plan Comparison**: 
+   - **Hobby (Free)**: 1024 MB memory, perfect for testing
+   - **Pro (Paid)**: 3008 MB memory, better for production
+   - Upgrade anytime in Vercel Settings
 
 ## 🎨 Customization
 
