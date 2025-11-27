@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maps IT Finder</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Maps IT Finder 🗺️</h1>
+      <div class="status-badge" id="statusBadge">
+        <span class="dot"></span> Backend: <span id="backendStatus">Checking...</span>
+      </div>
+    </header>
+
+    <div class="search-box">
+      <div class="input-group">
+        <label for="locationInput">Target Location</label>
+        <input type="text" id="locationInput" placeholder="e.g. Vastral, Gota" />
+      </div>
+      <button id="searchBtn">Search Google Maps</button>
+    </div>
+
+    <div id="errorMsg" class="error-msg hidden"></div>
+
+    <div id="loader" class="loader hidden">
+      <div class="spinner"></div>
+      <p>Scraping Google Maps...<br><span class="sub-text">Scrolling results (10-20s)</span></p>
+    </div>
+
+    <div id="results" class="results-list">
+      <div class="empty-state">
+        <p>Search to scrape companies from Google Maps.</p>
+        <small>Backend must be running on port 3000</small>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
