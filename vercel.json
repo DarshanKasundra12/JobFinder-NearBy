@@ -1,0 +1,4 @@
+{
+  "buildCommand": "cd client/public/backend-kit && npm install",
+  "outputDirectory": "client/public/backend-kit"
+}
