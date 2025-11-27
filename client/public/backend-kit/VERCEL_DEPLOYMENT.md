@@ -124,9 +124,11 @@ To use a Pro team after creating it:
 2. Select your new Pro team from the dropdown
 3. Import and deploy your repository
 
-**Current Settings:** 1024 MB (Hobby-friendly)
-- Sufficient for most company searches
-- If you need more power, upgrade to Pro
+**Current Settings:** 512 MB (Minimum - Ultra-lean for Hobby)
+- Lowest possible memory allocation
+- May be slower on heavy requests
+- Sufficient for light company searches
+- Upgrade to Pro plan if you need more performance
 
 ### API Not Working?
 

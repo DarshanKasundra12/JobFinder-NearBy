@@ -6,7 +6,7 @@
   },
   "functions": {
     "api/maps.js": {
-      "memory": 1024,
+      "memory": 512,
       "maxDuration": 60
     }
   },

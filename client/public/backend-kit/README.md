@@ -150,12 +150,11 @@ backend-kit/
 | Cost | Free | $20/mo |
 | Best For | Testing & Light Use | Production & Heavy Load |
 
-**Current Configuration:** Optimized for Hobby plan (1024 MB)
-
-To upgrade to Pro:
-1. Go to Vercel Dashboard
-2. Settings → Billing → Upgrade to Pro
-3. Or create a Team on Pro plan at https://vercel.com/teams/create
+**Current Configuration:** 512 MB (Minimum for Hobby plan)
+- Ultra-lean memory usage
+- Ideal for free tier
+- May be slower on heavy scraping requests
+- Upgrade to Pro for better performance
 
 ## 4️⃣ Keep it Running
 - **Do not close the terminal window.** The server needs to be running whenever you use the Chrome Extension.
