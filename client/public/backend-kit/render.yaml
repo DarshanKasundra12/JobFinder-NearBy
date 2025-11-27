@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: company-finder-backend
+    env: node
+    region: oregon
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PUPPETEER_SKIP_CHROMIUM_DOWNLOAD
+        value: "true"
+    scaling:
+      minInstances: 1
+      maxInstances: 3
