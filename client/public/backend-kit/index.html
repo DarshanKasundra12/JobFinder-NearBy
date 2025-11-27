@@ -318,7 +318,9 @@
     </div>
 
     <script>
-        const API_BASE_URL = 'http://localhost:3000';
+        // Detect if running locally or on Vercel
+        const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+        const API_BASE_URL = isLocal ? 'http://localhost:3000' : window.location.origin;
         const locationInput = document.getElementById('locationInput');
         const searchBtn = document.getElementById('searchBtn');
         const loadingSection = document.getElementById('loadingSection');
