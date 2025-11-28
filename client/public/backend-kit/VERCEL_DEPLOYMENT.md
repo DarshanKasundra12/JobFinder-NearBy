@@ -39,8 +39,8 @@ You'll see a "Configure Project" screen:
 |---------|-------|
 | **Project Name** | `company-finder` (or your choice) |
 | **Framework Preset** | `Other` |
-| **Root Directory** | ✅ Set to `client/public/backend-kit` |
-| **Build Command** | `npm install` |
+| **Root Directory** | *(Leave as repository root – handled automatically)* |
+| **Build Command** | `npm install --prefix client/public/backend-kit` *(auto from vercel.json)* |
 | **Output Directory** | Leave blank |
 | **Install Command** | `npm install` |
 
@@ -99,7 +99,7 @@ const API_BASE_URL = 'https://company-finder-xxxx.vercel.app';
 1. Go to Deployments → Click the failed deployment
 2. Scroll down to see error messages
 3. Common issues:
-   - Missing `vercel.json` - ensure it exists in `client/public/backend-kit/`
+   - Missing `vercel.json` - ensure the root `vercel.json` is committed
    - Missing dependencies - check `package.json` has `puppeteer-core` and `@sparticuz/chromium`
 
 ### Memory Limitations

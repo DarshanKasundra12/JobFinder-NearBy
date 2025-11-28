@@ -120,7 +120,7 @@ PORT=3001 npm start
 ### Deployment Issues
 - Check Vercel dashboard logs for errors
 - Ensure all files are committed to GitHub
-- Verify `vercel.json` and `api/maps.js` exist
+- Verify the root-level `vercel.json` and `api/maps.js` exist
 
 ## 📁 File Structure
 ```
@@ -130,8 +130,9 @@ backend-kit/
 ├── api/
 │   └── maps.js        # Serverless function (Vercel)
 ├── package.json
-├── vercel.json        # Vercel configuration
 └── README.md
+
+*(The Vercel configuration now lives in the repository root to allow deployments without changing the project root in the dashboard.)*
 ```
 
 ## 💡 Technologies

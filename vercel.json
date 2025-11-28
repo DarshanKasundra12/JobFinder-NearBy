@@ -1,4 +1,44 @@
 {
+  "version": 2,
   "buildCommand": "npm install --prefix client/public/backend-kit",
-  "outputDirectory": "client/public/backend-kit"
+  "env": {
+    "PUPPETEER_SKIP_CHROMIUM_DOWNLOAD": "true"
+  },
+  "functions": {
+    "client/public/backend-kit/api/maps.js": {
+      "memory": 512,
+      "maxDuration": 60
+    }
+  },
+  "builds": [
+    {
+      "src": "client/public/backend-kit/api/maps.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "client/public/backend-kit/index.html",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "client/public/backend-kit/api/$1.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "client/public/backend-kit/index.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "(.*)",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' blob:; script-src-elem 'self' blob:; connect-src 'self' https://*.google.com https://*.gstatic.com https://maps.googleapis.com https://www.google.com; img-src 'self' data: https://*.googleusercontent.com https://*.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; object-src 'none'"
+        }
+      ]
+    }
+  ]
 }
