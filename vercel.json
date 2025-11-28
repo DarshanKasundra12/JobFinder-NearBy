@@ -4,12 +4,6 @@
   "env": {
     "PUPPETEER_SKIP_CHROMIUM_DOWNLOAD": "true"
   },
-  "functions": {
-    "client/public/backend-kit/api/maps.js": {
-      "memory": 512,
-      "maxDuration": 60
-    }
-  },
   "builds": [
     {
       "src": "client/public/backend-kit/api/maps.js",
